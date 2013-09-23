@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27A2553D-E133-488F-84CC-285317A33BE1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlatformGameCreator.Editor</RootNamespace>
+    <AssemblyName>PlatformGameCreator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PlatformGameCreator.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PlatformGameCreator.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>853CF5B06B65EB96EE93F175DB2D3EFB9821876C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Editor_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\2DPGC_Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Animations\Animation.cs" />
+    <Compile Include="Assets\Animations\AnimationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assets\Animations\AnimationForm.Designer.cs">
+      <DependentUpon>AnimationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Animations\AnimationsManager.cs" />
+    <Compile Include="Assets\Animations\AnimationsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assets\DrawableAsset.cs" />
+    <Compile Include="Assets\Sounds\Sound.cs" />
+    <Compile Include="Assets\Sounds\SoundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assets\Sounds\SoundForm.Designer.cs">
+      <DependentUpon>SoundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Sounds\SoundsManager.cs" />
+    <Compile Include="Assets\Sounds\SoundsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assets\Sounds\SoundsView.Designer.cs">
+      <DependentUpon>SoundsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Textures\BaseTexturesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assets\Textures\BaseTexturesView.Designer.cs">
+      <DependentUpon>BaseTexturesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Textures\BasicControllerForShapesEditing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assets\Textures\BasicControllerForShapesEditing.Designer.cs">
+      <DependentUpon>BasicControllerForShapesEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Textures\ChangeOriginState.cs" />
+    <Compile Include="Assets\Textures\CircleEditState.cs" />
+    <Compile Include="Assets\Textures\EdgeEditState.cs" />
+    <Compile Include="Assets\Textures\PolygonEditState.cs" />
+    <Compile Include="Assets\Textures\Settings.cs" />
+    <Compile Include="Assets\Textures\ShapesEditingState.cs" />
+    <Compile Include="Assets\Textures\TextureControllerForShapesEditing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assets\Textures\TextureControllerForShapesEditing.Designer.cs">
+      <DependentUpon>TextureControllerForShapesEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Textures\TextureScreen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assets\Textures\TexturesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Disposable.cs" />
+    <Compile Include="Common\Interfaces.cs" />
+    <Compile Include="Common\ObservableList.cs" />
+    <Compile Include="GameObjects\Actors\ActorPrototypesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameObjects\Actors\ActorPrototypesView.Designer.cs">
+      <DependentUpon>ActorPrototypesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameObjects\CloningHelper.cs" />
+    <Compile Include="GameObjects\Paths\AddPathSceneState.cs" />
+    <Compile Include="GameObjects\Paths\EditingPathSceneState.cs" />
+    <Compile Include="GameSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameSettingsForm.Designer.cs">
+      <DependentUpon>GameSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateNodesDocumentation.cs" />
+    <Compile Include="IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroForm.Designer.cs">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcessingForm.Designer.cs">
+      <DependentUpon>ProcessingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistentDeletionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsistentDeletionForm.Designer.cs">
+      <DependentUpon>ConsistentDeletionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsistentDeletionHelper.cs" />
+    <Compile Include="GameObjects\Actors\ActorType.cs" />
+    <Compile Include="GameObjects\Actors\ActorTypesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameObjects\Actors\ActorTypesView.Designer.cs">
+      <DependentUpon>ActorTypesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameObjects\Actors\PhysicsComponent.cs" />
+    <Compile Include="Assets\Asset.cs" />
+    <Compile Include="Assets\ContentManager.cs" />
+    <Compile Include="Assets\Textures\TextureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assets\Textures\TextureForm.Designer.cs">
+      <DependentUpon>TextureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Textures\ShapesEditingScreen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assets\Textures\ShapesEditingScreen.Designer.cs">
+      <DependentUpon>ShapesEditingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Build.cs" />
+    <Compile Include="Building\GameGenerator.cs" />
+    <Compile Include="Building\ActorGenerator.cs" />
+    <Compile Include="Building\SceneGenerator.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\History.cs" />
+    <Compile Include="Common\Shape.cs" />
+    <Compile Include="EditorApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorApplicationForm.Designer.cs">
+      <DependentUpon>EditorApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameObjects\Actors\Actor.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Paths\PathInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameObjects\Paths\PathInfo.Designer.cs">
+      <DependentUpon>PathInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameObjects\Paths\PathView.cs" />
+    <Compile Include="MessagesManager.cs" />
+    <Compile Include="EditorApplication.cs" />
+    <Compile Include="GameObjects\Paths\Path.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="ProjectSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\Textures\Texture.cs" />
+    <Compile Include="Assets\Textures\TexturesManager.cs" />
+    <Compile Include="GameObjects\Actors\ActorView.cs" />
+    <Compile Include="GameObjects\Actors\ActorInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameObjects\Actors\ActorInfo.Designer.cs">
+      <DependentUpon>ActorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\GlobalBehaviourSceneState.cs" />
+    <Compile Include="Scenes\ISceneDrawable.cs" />
+    <Compile Include="Scenes\Layer.cs" />
+    <Compile Include="Scenes\LayerParallaxSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scenes\LayerParallaxSettings.Designer.cs">
+      <DependentUpon>LayerParallaxSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\MovingNodesSceneState.cs" />
+    <Compile Include="Scenes\RotatingNodesSceneState.cs" />
+    <Compile Include="Scenes\ScalingNodesSceneState.cs" />
+    <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Scenes\SceneBatch.cs" />
+    <Compile Include="Scenes\SceneScreen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scenes\ScenesManager.cs" />
+    <Compile Include="Scenes\SceneNode.cs" />
+    <Compile Include="Scenes\SceneState.cs" />
+    <Compile Include="Scenes\ScenesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenes\ScenesView.Designer.cs">
+      <DependentUpon>ScenesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\SceneTreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenes\SceneTreeView.Designer.cs">
+      <DependentUpon>SceneTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\SelectingNodesSceneState.cs" />
+    <Compile Include="Scenes\Settings.cs" />
+    <Compile Include="Scripting\Event.cs" />
+    <Compile Include="Scripting\EventsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\EventsView.Designer.cs">
+      <DependentUpon>EventsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\NamedVariable.cs" />
+    <Compile Include="Scripting\NamedVariablesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\NamedVariablesView.Designer.cs">
+      <DependentUpon>NamedVariablesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\BaseNode.cs" />
+    <Compile Include="Scripting\BaseSettingsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\BaseSettingsView.Designer.cs">
+      <DependentUpon>BaseSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\ConnectionView.cs" />
+    <Compile Include="Scripting\Node.cs" />
+    <Compile Include="Scripting\NodeSettingsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\NodeSocket.cs" />
+    <Compile Include="Scripting\NodeSocketView.cs" />
+    <Compile Include="Scripting\ScriptingComponent.cs" />
+    <Compile Include="Scripting\ScriptingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingForm.Designer.cs">
+      <DependentUpon>ScriptingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\ScriptingNodes.cs" />
+    <Compile Include="Scripting\ScriptingScreen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingScreen.Designer.cs">
+      <DependentUpon>ScriptingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\ScriptData.cs" />
+    <Compile Include="Scripting\NodeView.cs" />
+    <Compile Include="Scripting\SceneNode.cs" />
+    <Compile Include="Scripting\Settings.cs" />
+    <Compile Include="Scripting\StateMachine.cs" />
+    <Compile Include="Scripting\StateMachinesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\StateMachinesView.Designer.cs">
+      <DependentUpon>StateMachinesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\StateMachineView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scripting\StateMachineView.Designer.cs">
+      <DependentUpon>StateMachineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\StateSettingsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\StateSettingsView.Designer.cs">
+      <DependentUpon>StateSettingsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\Var.cs" />
+    <Compile Include="Scripting\VariableView.cs" />
+    <Compile Include="Scripting\Variable.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Winforms\FloatBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Winforms\ToolStripNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xna\ContentBuilder.cs" />
+    <Compile Include="Xna\ErrorLogger.cs" />
+    <Compile Include="Xna\GraphicsDeviceControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xna\GraphicsDeviceService.cs" />
+    <Compile Include="Xna\PretransformedQuad.cs" />
+    <Compile Include="Xna\ServiceContainer.cs" />
+    <Compile Include="Xna\XnaFramework.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Animations\AnimationForm.resx">
+      <DependentUpon>AnimationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Sounds\SoundForm.resx">
+      <DependentUpon>SoundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Sounds\SoundsView.resx">
+      <DependentUpon>SoundsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Textures\BaseTexturesView.resx">
+      <DependentUpon>BaseTexturesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Textures\BasicControllerForShapesEditing.resx">
+      <DependentUpon>BasicControllerForShapesEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Textures\TextureControllerForShapesEditing.resx">
+      <DependentUpon>TextureControllerForShapesEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameObjects\Actors\ActorPrototypesView.resx">
+      <DependentUpon>ActorPrototypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameSettingsForm.resx">
+      <DependentUpon>GameSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcessingForm.resx">
+      <DependentUpon>ProcessingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsistentDeletionForm.resx">
+      <DependentUpon>ConsistentDeletionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameObjects\Actors\ActorTypesView.resx">
+      <DependentUpon>ActorTypesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Textures\TextureForm.resx">
+      <DependentUpon>TextureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditorApplicationForm.resx">
+      <DependentUpon>EditorApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameObjects\Paths\PathInfo.resx">
+      <DependentUpon>PathInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GameObjects\Actors\ActorInfo.resx">
+      <DependentUpon>ActorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scenes\LayerParallaxSettings.resx">
+      <DependentUpon>LayerParallaxSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scenes\ScenesView.resx">
+      <DependentUpon>ScenesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scenes\SceneTreeView.resx">
+      <DependentUpon>SceneTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\EventsView.resx">
+      <DependentUpon>EventsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\NamedVariablesView.resx">
+      <DependentUpon>NamedVariablesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\BaseSettingsView.resx">
+      <DependentUpon>BaseSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\ScriptingForm.resx">
+      <DependentUpon>ScriptingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\ScriptingScreen.resx">
+      <DependentUpon>ScriptingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\StateMachinesView.resx">
+      <DependentUpon>StateMachinesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\StateMachineView.resx">
+      <DependentUpon>StateMachineView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\StateSettingsView.resx">
+      <DependentUpon>StateSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Farseer Physics Engine 3.3.1 XNA\Farseer Physics XNA.csproj">
+      <Project>{0A850700-1ABB-4288-A391-6726B90EBEB9}</Project>
+      <Name>Farseer Physics XNA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlatformGameCreator.GameEngine\GameEngine.csproj">
+      <Project>{B54568A1-25C6-45EE-A4B7-566A36BD25BE}</Project>
+      <Name>GameEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\treeviewadv\Aga.Controls\Aga.Controls.csproj">
+      <Project>{E73BB233-D88B-44A7-A98F-D71EE158381D}</Project>
+      <Name>Aga.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_UndoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_RedoHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGridlines2HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transform-rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transform-scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_texture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_animation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_layer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_path.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scripting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shapes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2DPGC_Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoomHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layerParallax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_layerParallax.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
